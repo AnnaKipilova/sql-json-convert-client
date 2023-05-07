@@ -40,7 +40,7 @@ function App() {
 
   // ziskanie vsetkych dat z databazy
   const getAllData = () => {
-    Axios.get(BASE_URL + '/all_data', {
+    Axios.get('https://sqljsonconverter.herokuapp.com/all_data', {
       params: {
         selectedOptions: JSON.stringify(selectedOptions)
       }
@@ -58,7 +58,7 @@ function App() {
       // setErrorMessage("<Empty SQL field>");
       setJsonData();
     } else {
-      Axios.post(BASE_URL + '/api/sql', {
+      Axios.post('https://sqljsonconverter.herokuapp.com/api/sql', {
         SQLfromUser,
       }).then(response => {
         setJsonData(response.data);
