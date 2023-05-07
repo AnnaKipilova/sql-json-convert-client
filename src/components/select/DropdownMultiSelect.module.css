@@ -1,0 +1,23 @@
+.select {
+  /* position: absolute; */
+  /* background-color: #f2f2f2; */
+  /* padding: 3%; */
+  /* border-color: white;
+  border-radius: 10%;
+  border-style: dotted; */
+
+  display:inline-block;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  align-items: center;
+  opacity: 1;
+}
+
+.BtnSelectAll {
+    
+}
+
+.css-13cymwt-control {
+  border-color: red;
+}
