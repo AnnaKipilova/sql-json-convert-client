@@ -40,7 +40,8 @@ function App() {
 
   // ziskanie vsetkych dat z databazy
   const getAllData = () => {
-    Axios.get('https://cors-anywhere.herokuapp.com/https://sqljsonconverter.herokuapp.com/all_data', {
+    // Axios.get('https://cors-anywhere.herokuapp.com/https://sqljsonconverter.herokuapp.com/all_data', {
+      Axios.get('https://sql-to-json-converter-backend.onrender.com/all_data', {
       params: {
         selectedOptions: JSON.stringify(selectedOptions)
       }
@@ -58,7 +59,8 @@ function App() {
       // setErrorMessage("<Empty SQL field>");
       setJsonData();
     } else {
-      Axios.post('https://cors-anywhere.herokuapp.com/https://sqljsonconverter.herokuapp.com/api/sql', {
+      // Axios.post('https://cors-anywhere.herokuapp.com/https://sqljsonconverter.herokuapp.com/api/sql', {
+      Axios.post('https://sql-to-json-converter-backend.onrender.com/api/sql', {
         SQLfromUser,
       }).then(response => {
         setJsonData(response.data);
